@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">homework1.2.1</string>
+    <string name="subscription">Подписка</string>
+    <string name="mail">Эл.почта</string>
+    <string name="password">Пароль</string>
+    <string name="btnOk">ОК</string>
+    <string name="clear">Очистить</string>
 </resources>
