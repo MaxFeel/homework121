@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         okButton.setOnClickListener(okListner);
         Button clearButton = findViewById(R.id.button2);
         clearButton.setOnClickListener(clearListner);
+        textView = findViewById(R.id.textView5);
     }
 
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             email = findViewById(R.id.editText);
             pass = findViewById(R.id.editText2);
-            textView = findViewById(R.id.textView5);
+            //textView = findViewById(R.id.textView5);
             textView.setText("Подписка на рассылку успешно " +
                     "оформлена для пользователя "+email.getText().toString()+" пароль "+ pass.getText().toString());
         }
@@ -43,8 +44,10 @@ public class MainActivity extends AppCompatActivity {
     private final View.OnClickListener clearListner = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            textView = findViewById(R.id.textView5);
+            //textView = findViewById(R.id.textView5);
             textView.setText("");
+            email.setText("");
+            pass.setText("");
         }
     };
 }
