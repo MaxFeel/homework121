@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText email;
-    EditText pass;
-    TextView textView;
+    private EditText email;
+    private EditText pass;
+    private TextView textView;
+    private String textMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
             email = findViewById(R.id.editText);
             pass = findViewById(R.id.editText2);
             //textView = findViewById(R.id.textView5);
-            textView.setText("Подписка на рассылку успешно " +
-                    "оформлена для пользователя "+email.getText().toString()+" пароль "+ pass.getText().toString());
+            //textView.setText("Подписка на рассылку успешно " +
+            //        "оформлена для пользователя "+email.getText().toString()+" пароль "+ pass.getText().toString());
+            textMessage = getString(R.string.subscribe_sucsessful,email.getText().toString(),pass.getText().toString());
+            textView.setText(textMessage);
         }
     };
 
